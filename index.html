@@ -6,185 +6,63 @@
 
 <title>GumbleFM</title>
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
-
-body{
-
-background:linear-gradient(135deg,#0a0a0a,#1b1b1b);
-
-color:white;
-
-min-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-}
-
-.card{
-
-width:95%;
-max-width:700px;
-
-background:#181818;
-
-padding:40px;
-
-border-radius:20px;
-
-box-shadow:0 0 30px rgba(0,255,120,.25);
-
-text-align:center;
-
-}
-
-.logo{
-
-font-size:65px;
-
-font-weight:bold;
-
-color:#18d218;
-
-margin-bottom:10px;
-
-}
-
-.slogan{
-
-color:#bbbbbb;
-
-margin-bottom:35px;
-
-font-size:20px;
-
-}
-
-.status{
-
-display:inline-block;
-
-background:#18d218;
-
-color:black;
-
-padding:8px 18px;
-
-border-radius:30px;
-
-font-weight:bold;
-
-margin-bottom:25px;
-
-}
-
-iframe{
-
-border:none;
-
-width:100%;
-
-height:240px;
-
-border-radius:15px;
-
-background:black;
-
-}
-
-.info{
-
-margin-top:35px;
-
-display:flex;
-
-justify-content:space-around;
-
-flex-wrap:wrap;
-
-gap:20px;
-
-}
-
-.box{
-
-background:#232323;
-
-padding:20px;
-
-border-radius:15px;
-
-min-width:180px;
-
-}
-
-.box h2{
-
-font-size:18px;
-
-margin-bottom:10px;
-
-color:#18d218;
-
-}
-
-footer{
-
-margin-top:40px;
-
-color:#777;
-
-font-size:14px;
-
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
-
 <body>
 
-<div class="card">
+<div class="background"></div>
+
+<header>
 
 <div class="logo">
-📻 GUMBLE FM
+GUMBLE<span>FM</span>
 </div>
 
-<div class="slogan">
-A banda sonora da tua viagem.
+<div class="live">
+● LIVE
 </div>
 
-<div class="status">
-🟢 EM DIRETO
-</div>
+</header>
 
-<iframe src="https://cloud.caster.fm/player/a237b501-f835-481a-be34-d56fd3a97469"></iframe>
+<main>
 
-<div class="info">
+<h1>A banda sonora da tua viagem.</h1>
 
-<div class="box">
-<h2>🎵 Emissão</h2>
-24 Horas
-</div>
+<p class="subtitle">
+Rap Português • Rap Internacional • DnB • Rock • Música Portuguesa
+</p>
 
-<div class="box">
-<h2>🇵🇹 Géneros</h2>
-Rap • Rock • DnB • Música Portuguesa
-</div>
+<div class="player-box">
 
-
+<iframe
+src="https://cloud.caster.fm/player/a237b501-f835-481a-be34-d56fd3a97469"
+allow="autoplay"
+loading="lazy">
+</iframe>
 
 </div>
+
+<div class="stats">
+
+<div class="card">
+<h3>EMISSÃO</h3>
+<p>24 Horas</p>
+</div>
+
+<div class="card">
+<h3>ESTILO</h3>
+<p>Urban Radio</p>
+</div>
+
+<div class="card">
+<h3>PAÍS</h3>
+<p>Portugal</p>
+</div>
+
+</div>
+
+</main>
 
 <footer>
 
@@ -192,7 +70,7 @@ Rap • Rock • DnB • Música Portuguesa
 
 </footer>
 
-</div>
+<script src="script.js"></script>
 
 </body>
 </html>
