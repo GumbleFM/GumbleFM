@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,6 +11,7 @@
 <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
 <div class="background"></div>
@@ -19,8 +22,9 @@
 GUMBLE<span>FM</span>
 </div>
 
-<div class="live">
-● LIVE
+<div class="live-badge">
+<span class="dot"></span>
+LIVE
 </div>
 
 </header>
@@ -30,54 +34,87 @@ GUMBLE<span>FM</span>
 <h1>A banda sonora da tua viagem.</h1>
 
 <p class="subtitle">
-Rap Português • Rap Internacional • DnB • Rock • Música Portuguesa
+Rap Português • Rap Internacional • Drum & Bass • Rock • Música Portuguesa
 </p>
 
-<div class="player-box">
+<section class="player">
 
-<div class="player-box">
+<div class="cover">
 
-    <div class="player">
+<div class="vinyl">
 
-        <div class="player-status">
-            <span class="live-dot">🔴 LIVE</span>
-        </div>
-
-        <h2 id="song-title">
-            A carregar música...
-        </h2>
-
-        <p id="listeners">
-            A carregar ouvintes...
-        </p>
-
-        <audio id="radioPlayer" controls preload="none">
-            <source src="https://sapircast.caster.fm:17323/OV5rn" type="audio/mpeg">
-            O teu navegador não suporta áudio.
-        </audio>
-
-    </div>
+🎵
 
 </div>
 
-<div class="stats">
+</div>
+
+<div class="info">
+
+<h2 id="song">
+A carregar música...
+</h2>
+
+<p id="listeners">
+A carregar ouvintes...
+</p>
+
+<div class="controls">
+
+<button id="playButton">
+
+▶
+
+</button>
+
+<input
+type="range"
+id="volume"
+min="0"
+max="100"
+value="100">
+
+</div>
+
+<audio id="radio">
+
+<source
+src="https://sapircast.caster.fm:17323/OV5rn"
+type="audio/mpeg">
+
+</audio>
+
+</div>
+
+</section>
+
+<section class="cards">
 
 <div class="card">
+
 <h3>EMISSÃO</h3>
+
 <p>24 Horas</p>
+
 </div>
 
 <div class="card">
+
 <h3>ESTILO</h3>
+
 <p>Urban Radio</p>
+
 </div>
 
 <div class="card">
+
 <h3>PAÍS</h3>
-<p>Portugal</p>
-</div>
+
+<p>Portugal 🇵🇹</p>
 
 </div>
+
+</section>
 
 </main>
 
@@ -90,4 +127,5 @@ Rap Português • Rap Internacional • DnB • Rock • Música Portuguesa
 <script src="script.js"></script>
 
 </body>
+
 </html>
