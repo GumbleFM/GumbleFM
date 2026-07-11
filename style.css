@@ -223,3 +223,6 @@ gap:20px;
 }
 
 }
+.vinyl.playing{
+animation-play-state:running;
+}
