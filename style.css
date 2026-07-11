@@ -109,6 +109,8 @@ justify-content:center;
 align-items:center;
 font-size:70px;
 animation:spin 10s linear infinite;
+animation-play-state:paused;
+transition:.3s;
 box-shadow:
 0 0 40px rgba(29,185,84,.25),
 inset 0 0 25px rgba(255,255,255,.06);
