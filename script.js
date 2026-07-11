@@ -1,5 +1,14 @@
-const radio = document.getElementById("radio");
+const radio = document.querySelector("audio");
+const vinyl = document.getElementById("vinyl");
 
-if (radio) {
-    radio.volume = 1;
-}
+radio.addEventListener("play", () => {
+    vinyl.classList.add("playing");
+});
+
+radio.addEventListener("pause", () => {
+    vinyl.classList.remove("playing");
+});
+
+radio.addEventListener("ended", () => {
+    vinyl.classList.remove("playing");
+});
