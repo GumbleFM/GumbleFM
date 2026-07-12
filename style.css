@@ -166,12 +166,12 @@ z-index:2;
 }
   
 .vinyl img{
-    width:120px;
-    height:120px;
+    width:130px;
+    height:130px;
     object-fit:contain;
     display:block;
     position:relative;
-    left:8px;
+    left:10px;
     top:2px;
     z-index:1;
 }
