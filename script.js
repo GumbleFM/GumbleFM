@@ -41,3 +41,35 @@ async function updateSong() {
 updateSong();
 
 setInterval(updateSong,5000);
+
+const playBtn = document.getElementById("playBtn");
+
+if (playBtn) {
+
+    playBtn.addEventListener("click", async () => {
+
+        if (radio.paused) {
+
+            try {
+                await radio.play();
+            } catch (e) {
+                console.log(e);
+            }
+
+        } else {
+
+            radio.pause();
+
+        }
+
+    });
+
+    radio.addEventListener("play", () => {
+        playBtn.textContent = "⏸ Pausar";
+    });
+
+    radio.addEventListener("pause", () => {
+        playBtn.textContent = "▶ Ouvir Agora";
+    });
+
+}
