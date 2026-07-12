@@ -166,10 +166,11 @@ border-radius:50%;
 }
 
 .vinyl img{
-width:95px;
-height:95px;
+width:150px;
+height:150px;
 object-fit:contain;
-filter:drop-shadow(0 0 15px rgba(29,185,84,.5));
+filter:drop-shadow(0 0 18px rgba(29,185,84,.6));
+z-index:1;
 }
 
 .info h2{
