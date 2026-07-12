@@ -52,6 +52,18 @@ color:var(--green);
 text-shadow:0 0 20px rgba(29,185,84,.7);
 }
 
+.logo img{
+height:70px;
+width:auto;
+display:block;
+filter:drop-shadow(0 0 20px rgba(29,185,84,.25));
+transition:.3s;
+}
+
+.logo img:hover{
+transform:scale(1.03);
+}
+
 .live-badge{
 display:flex;
 align-items:center;
