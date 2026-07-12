@@ -170,7 +170,9 @@ z-index:2;
     height:120px;
     object-fit:contain;
     display:block;
-    filter:drop-shadow(0 0 15px rgba(29,185,84,.5));
+    position:relative;
+    left:8px;
+    top:2px;
     z-index:1;
 }
 
