@@ -47,12 +47,6 @@ align-items:center;
 padding:35px 8%;
 }
 
-.logo{
-font-size:48px;
-font-weight:900;
-letter-spacing:3px;
-}
-
 .logo span{
 color:var(--green);
 text-shadow:0 0 20px rgba(29,185,84,.7);
