@@ -11,26 +11,6 @@
 
 </head>
 
-<script>
-const radio = document.getElementById("radio");
-const btn = document.getElementById("playBtn");
-const volume = document.getElementById("volume");
-
-btn.onclick = () => {
-    if (radio.paused) {
-        radio.play();
-        btn.textContent = "⏸ Pausar";
-    } else {
-        radio.pause();
-        btn.textContent = "▶ Ouvir Agora";
-    }
-};
-
-volume.oninput = () => {
-    radio.volume = volume.value;
-};
-</script> 
-    
 <body>
 
 <div class="background"></div>
@@ -55,9 +35,7 @@ LIVE
 <h1>A banda sonora da tua viagem.</h1>
 
 <p class="subtitle">
-
 Rap Português • Rap Internacional • Drum & Bass • Rock • Música Portuguesa
-
 </p>
 
 </section>
@@ -69,6 +47,7 @@ Rap Português • Rap Internacional • Drum & Bass • Rock • Música Portug
 <div class="vinyl">
 <img src="icon.png" alt="GumbleFM">
 </div>
+
 </div>
 
 <div class="info">
@@ -76,16 +55,13 @@ Rap Português • Rap Internacional • Drum & Bass • Rock • Música Portug
 <div class="live-status">
 
 <span class="pulse"></span>
-
 <span>EM DIRETO</span>
 
 <div class="equalizer">
-
 <span></span>
 <span></span>
 <span></span>
 <span></span>
-
 </div>
 
 </div>
@@ -93,23 +69,25 @@ Rap Português • Rap Internacional • Drum & Bass • Rock • Música Portug
 <h2>GumbleFM</h2>
 
 <p>
-
 Sempre contigo, 24 horas por dia.
-
 </p>
 
 <audio id="radio">
-   
-<div class="controls">
-    <button id="playBtn">▶ Ouvir Agora</button>
+    <source src="https://uk3freenew.listen2myradio.com/live.mp3?typeportmount=s1_20795_stream_867112142" type="audio/mpeg">
+</audio>
 
-    <input
-        type="range"
-        id="volume"
-        min="0"
-        max="1"
-        step="0.01"
-        value="1">
+<div class="controls">
+
+<button id="playBtn">▶ Ouvir Agora</button>
+
+<input
+type="range"
+id="volume"
+min="0"
+max="1"
+step="0.01"
+value="1">
+
 </div>
 
 </div>
@@ -119,35 +97,23 @@ Sempre contigo, 24 horas por dia.
 <section class="cards">
 
 <div class="card">
-
 <h3>📻 EMISSÃO</h3>
-
 <p>24 Horas / 7 Dias</p>
-
 </div>
 
 <div class="card">
-
 <h3>🎵 GÉNEROS</h3>
-
 <p>Rap • Rock • Drum & Bass</p>
-
 </div>
 
 <div class="card">
-
 <h3>🇵🇹 PAÍS</h3>
-
 <p>Portugal</p>
-
 </div>
 
 <div class="card">
-
 <h3>❤️ GUMBLEFM</h3>
-
 <p>A tua rádio online.</p>
-
 </div>
 
 </section>
@@ -157,13 +123,11 @@ Sempre contigo, 24 horas por dia.
 <h2>Bem-vindo à GumbleFM</h2>
 
 <p>
-
 Na GumbleFM a música nunca para.
 
 Selecionamos diariamente Rap Português, Rap Internacional, Drum & Bass, Rock e grandes clássicos para acompanhar o teu dia.
 
 Liga o som e aproveita.
-
 </p>
 
 </section>
