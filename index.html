@@ -11,6 +11,26 @@
 
 </head>
 
+<script>
+const radio = document.getElementById("radio");
+const btn = document.getElementById("playBtn");
+const volume = document.getElementById("volume");
+
+btn.onclick = () => {
+    if (radio.paused) {
+        radio.play();
+        btn.textContent = "⏸ Pausar";
+    } else {
+        radio.pause();
+        btn.textContent = "▶ Ouvir Agora";
+    }
+};
+
+volume.oninput = () => {
+    radio.volume = volume.value;
+};
+</script> 
+    
 <body>
 
 <div class="background"></div>
