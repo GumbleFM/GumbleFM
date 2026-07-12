@@ -1,34 +1,23 @@
 const radio = document.getElementById("radio");
-const vinyl = document.querySelector(".vinyl");
-
 const playBtn = document.getElementById("playBtn");
 const volume = document.getElementById("volume");
 
-if (playBtn) {
-    playBtn.onclick = async () => {
-        try {
-            if (radio.paused) {
-                await radio.play();
-            } else {
-                radio.pause();
-            }
-        } catch (e) {
-            console.error(e);
-        }
-    };
-}
+playBtn.onclick = function () {
 
-if (volume) {
-    volume.oninput = () => {
-        radio.volume = volume.value;
-    };
-}
+    if (radio.paused) {
 
-radio.addEventListener("play", () => {
-    if (playBtn) playBtn.textContent = "⏸ Pausar";
-});
+        radio.play();
+        playBtn.innerHTML = "⏸ Pausar";
 
-radio.addEventListener("pause", () => {
-    if (playBtn) playBtn.textContent = "▶ Ouvir Agora";
-});
+    } else {
 
+        radio.pause();
+        playBtn.innerHTML = "▶ Ouvir Agora";
+
+    }
+
+};
+
+volume.oninput = function () {
+    radio.volume = this.value;
+};
