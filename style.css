@@ -166,12 +166,12 @@ z-index:2;
 }
   
 .vinyl img{
-width:80px;
-height:80px;
-object-fit:contain;
-display:block;
-filter:drop-shadow(0 0 15px rgba(29,185,84,.5));
-z-index:1;
+    width:110px;
+    height:110px;
+    object-fit:contain;
+    display:block;
+    filter:drop-shadow(0 0 15px rgba(29,185,84,.5));
+    z-index:1;
 }
 
 .info h2{
