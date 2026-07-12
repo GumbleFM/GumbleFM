@@ -46,23 +46,22 @@ const playBtn = document.getElementById("playBtn");
 
 if (playBtn) {
 
-    playBtn.addEventListener("click", async () => {
+   playBtn.addEventListener("click", async () => {
 
-        if (radio.paused) {
+    console.log("Clique");
 
-            try {
-                await radio.play();
-            } catch (e) {
-                console.log(e);
-            }
+    try {
 
-        } else {
+        await radio.play();
+        console.log("A tocar");
 
-            radio.pause();
+    } catch (err) {
 
-        }
+        console.error(err);
 
-    });
+    }
+
+});
 
     radio.addEventListener("play", () => {
         playBtn.textContent = "⏸ Pausar";
