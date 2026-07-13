@@ -122,7 +122,12 @@ text-shadow:
 
 .subtitle{
 font-size:22px;
-color:#a9a9a9;
+font-weight:500;
+color:#d8d8d8;
+line-height:1.8;
+letter-spacing:.5px;
+max-width:900px;
+margin:auto;
 }
 
 .player{
