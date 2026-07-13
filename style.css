@@ -244,7 +244,8 @@ text-transform:uppercase;
 
 .card p{
 font-size:18px;
-color:#d0d0d0;
+color:#d8d8d8;
+line-height:1.7;
 }
 
 .about{
