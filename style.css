@@ -228,9 +228,11 @@ transition:.35s ease;
 }
 
 .card:hover{
-transform:translateY(-8px);
-border-color:var(--green);
-box-shadow:0 0 30px rgba(29,185,84,.18);
+transform:translateY(-10px) scale(1.02);
+border-color:#1DB954;
+box-shadow:
+0 20px 40px rgba(0,0,0,.35),
+0 0 35px rgba(29,185,84,.18);
 }
 
 .card h3{
