@@ -102,12 +102,22 @@ box-shadow:0 0 80px rgba(29,185,84,.15);
 }
 
 .hero h1{
-font-size:82px;
-font-weight:900;
-line-height:1;
-margin-bottom:25px;
-text-transform:uppercase;
+font-family:"Anton",sans-serif;
+font-size:92px;
+line-height:.95;
 letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:30px;
+text-align:center;
+color:#fff;
+text-shadow:0 0 35px rgba(0,0,0,.5);
+}
+
+.hero h1 span{
+color:#1DB954;
+text-shadow:
+0 0 18px rgba(29,185,84,.45),
+0 0 40px rgba(29,185,84,.2);
 }
 
 .subtitle{
