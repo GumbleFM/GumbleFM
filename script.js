@@ -27,30 +27,3 @@ volume.oninput = function () {
     radio.volume = this.value;
 };
 
-async function updateSong() {
-
-    try {
-
-        const response = await fetch("https://uk3freenew.listen2myradio.com:20795/currentsong?sid=1");
-
-        const text = await response.text();
-
-        if (text.trim() !== "") {
-
-            songTitle.textContent = "🎵 " + text;
-            songArtist.textContent = "🔴 Em direto";
-
-        }
-
-    } catch {
-
-        songTitle.textContent = "GumbleFM";
-        songArtist.textContent = "🔴 Em direto";
-
-    }
-
-}
-
-updateSong();
-
-setInterval(updateSong, 5000);
