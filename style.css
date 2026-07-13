@@ -234,9 +234,12 @@ box-shadow:0 0 30px rgba(29,185,84,.18);
 }
 
 .card h3{
-color:var(--green);
-margin-bottom:12px;
-font-size:20px;
+color:#1DB954;
+margin-bottom:16px;
+font-size:22px;
+font-family:"Anton",sans-serif;
+letter-spacing:1px;
+text-transform:uppercase;
 }
 
 .card p{
