@@ -575,21 +575,14 @@ transform:translateY(-3px) scale(1.03);
 box-shadow:0 15px 35px rgba(37,211,102,.45);
 }
 
-.whatsapp-btn svg{
-width:24px;
-height:24px;
-flex-shrink:0;
-}
-
 @media(max-width:768px){
 
-.whatsapp-btn span{
-display:none;
+.whatsapp-btn{
+font-size:18px;
 }
 
-.whatsapp-btn{
-padding:15px;
-border-radius:50%;
+.whatsapp-btn span{
+font-size:16px;
 }
 
 }
