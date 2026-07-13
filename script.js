@@ -2,15 +2,17 @@ const radio = document.getElementById("radio");
 const playBtn = document.getElementById("playBtn");
 const volume = document.getElementById("volume");
 
-const songTitle = document.getElementById("songTitle");
-const songArtist = document.getElementById("songArtist");
-
-playBtn.onclick = function () {
+playBtn.onclick = async function () {
 
     if (radio.paused) {
 
-        radio.play();
-        playBtn.innerHTML = "⏸ Pausar";
+        try {
+            await radio.play();
+            playBtn.innerHTML = "⏸ Pausar";
+        } catch (err) {
+            alert("Não foi possível iniciar a rádio neste dispositivo.");
+            console.error(err);
+        }
 
     } else {
 
