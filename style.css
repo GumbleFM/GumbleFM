@@ -518,21 +518,23 @@ transform:translateY(0);
 }
 
 .request-btn{
-display:inline-block;
+display:inline-flex;
+align-items:center;
+justify-content:center;
 margin-top:35px;
-padding:16px 38px;
+padding:16px 40px;
+border-radius:50px;
 background:#1DB954;
 color:#fff;
 text-decoration:none;
-font-size:18px;
 font-weight:700;
-border-radius:50px;
+font-size:18px;
 transition:.3s;
-box-shadow:0 0 25px rgba(29,185,84,.35);
+box-shadow:0 0 20px rgba(29,185,84,.25);
 }
 
 .request-btn:hover{
-transform:translateY(-3px) scale(1.03);
-background:#23d663;
-box-shadow:0 0 35px rgba(29,185,84,.55);
+transform:translateY(-2px);
+background:#22d760;
+box-shadow:0 0 35px rgba(29,185,84,.45);
 }
