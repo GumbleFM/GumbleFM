@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pedido de Música - GumbleFM</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<main style="max-width:700px;margin:60px auto;padding:40px;">
+
+<h1 style="font-family:Anton,sans-serif;font-size:60px;margin-bottom:15px;">
+🎵 PEDIR UMA MÚSICA
+</h1>
+
+<p style="margin-bottom:35px;color:#bbb;">
+Envia o teu pedido para a GumbleFM.
+</p>
+
+<form action="https://formsubmit.co/johnygumble@gmail.com" method="POST">
+
+<input type="hidden" name="_subject" value="Novo pedido de música - GumbleFM">
+<input type="hidden" name="_captcha" value="false">
+
+<input
+type="text"
+name="Nome"
+placeholder="O teu nome"
+required>
+
+<br><br>
+
+<input
+type="text"
+name="Artista"
+placeholder="Artista"
+required>
+
+<br><br>
+
+<input
+type="text"
+name="Música"
+placeholder="Nome da música"
+required>
+
+<br><br>
+
+<textarea
+name="Mensagem"
+placeholder="Mensagem (opcional)"
+rows="5"></textarea>
+
+<br><br>
+
+<button type="submit" id="playBtn">
+🎵 Enviar Pedido
+</button>
+
+</form>
+
+</main>
+
+</body>
+</html>
