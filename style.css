@@ -454,3 +454,65 @@ letter-spacing:2px;
 text-transform:uppercase;
 box-shadow:0 0 20px rgba(29,185,84,.12);
 }
+
+/* -------- Fundo Musical -------- */
+
+body::before{
+content:"♪   ♫   ♬   ♪   ♫";
+position:fixed;
+top:8%;
+left:4%;
+font-size:80px;
+font-weight:bold;
+color:rgba(29,185,84,.03);
+letter-spacing:120px;
+pointer-events:none;
+z-index:-1;
+animation:musicFloat 35s linear infinite;
+}
+
+body::after{
+content:"♫   ♪   ♬   ♫";
+position:fixed;
+bottom:10%;
+right:5%;
+font-size:70px;
+font-weight:bold;
+color:rgba(255,255,255,.025);
+letter-spacing:100px;
+pointer-events:none;
+z-index:-1;
+animation:musicFloat2 42s linear infinite;
+}
+
+@keyframes musicFloat{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-25px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+@keyframes musicFloat2{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(20px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
