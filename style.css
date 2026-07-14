@@ -586,3 +586,21 @@ font-size:16px;
 }
 
 }
+
+.download-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:14px 28px;
+    background:#19c441;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    background:#14a837;
+    transform:scale(1.05);
+}
