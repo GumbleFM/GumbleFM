@@ -20,6 +20,8 @@ playBtn.addEventListener("click", async () => {
         radio.pause();
         playBtn.textContent = "▶ Ouvir Agora";
 
+document.querySelector(".vinyl").classList.remove("spinning");        
+
     }
 
 });
