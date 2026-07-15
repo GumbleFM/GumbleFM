@@ -38,24 +38,35 @@ radio.addEventListener("play", () => {
 
 const shareBtn = document.getElementById("shareBtn");
 
-if (shareBtn) {
+shareBtn.addEventListener("click", async () => {
 
-    shareBtn.addEventListener("click", async () => {
+    const url = "https://gumblefm.github.io/GumbleFM/";
 
-        const url = "https://gumblefm.github.io/GumbleFM/";
+    // Só usar a partilha em dispositivos móveis
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-        if (navigator.share) {
+    if (isMobile && navigator.share) {
 
-            try {
-                await navigator.share({
-                    title: "GumbleFM",
-                    text: "🎧 Ouve a GumbleFM!",
-                    url: url
-                });
-                return;
-            } catch (e) {}
+        try {
 
-        }
+            await navigator.share({
+                title: "GumbleFM",
+                text: "🎧 Ouve a GumbleFM!",
+                url: url
+            });
+
+            return;
+
+        } catch(e) {}
+
+    }
+
+    try {
+
+        await navigator.clipboard.writeText(url);
+        alert("✅ Link copiado!");
+
+    } catch {
 
         const input = document.createElement("input");
         input.value = url;
@@ -64,8 +75,8 @@ if (shareBtn) {
         document.execCommand("copy");
         document.body.removeChild(input);
 
-        alert("✅ Link copiado!\n\nAgora é só colar onde quiseres.");
+        alert("✅ Link copiado!");
 
-    });
+    }
 
-}
+});
