@@ -195,6 +195,19 @@ z-index:2;
     z-index:1;
 }
 
+.vinyl.spinning{
+    animation: spin 6s linear infinite;
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
 .info h2{
 font-size:44px;
 margin-bottom:15px;
