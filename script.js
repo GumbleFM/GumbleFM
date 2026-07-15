@@ -35,3 +35,32 @@ radio.addEventListener("pause", () => {
 radio.addEventListener("play", () => {
     playBtn.textContent = "⏸ Pausar";
 });
+
+const shareBtn = document.getElementById("shareBtn");
+
+if (shareBtn) {
+
+    shareBtn.addEventListener("click", async () => {
+
+        if (navigator.share) {
+
+            try {
+
+                await navigator.share({
+                    title: "GumbleFM",
+                    text: "🎧 Ouve a GumbleFM!",
+                    url: "https://gumblefm.github.io/GumbleFM/"
+                });
+
+            } catch (e) {}
+
+        } else {
+
+            await navigator.clipboard.writeText("https://gumblefm.github.io/GumbleFM/");
+            alert("Link copiado para a área de transferência!");
+
+        }
+
+    });
+
+}
