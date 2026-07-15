@@ -34,6 +34,9 @@ radio.addEventListener("pause", () => {
 
 radio.addEventListener("play", () => {
     playBtn.textContent = "⏸ Pausar";
+
+    document.querySelector(".vinyl").classList.add("spinning");
+    
 });
 
 const shareBtn = document.getElementById("shareBtn");
