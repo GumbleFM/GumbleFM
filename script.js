@@ -66,9 +66,12 @@ function reconnect() {
 
         try {
 
-            radio.load();
-            await radio.play();
+            radio.pause();
 
+radio.src = "https://uk7freenew.listen2myradio.com/live.mp3?typeportmount=s1_38829_stream_375226237&t=" + Date.now();
+
+await radio.play();
+            
             reconnecting = false;
 
         } catch (e) {
