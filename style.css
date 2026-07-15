@@ -518,10 +518,11 @@ transform:translateY(0);
 }
 
 .request-btn{
-display:inline-flex;
+display:flex;
+width:fit-content;
 align-items:center;
 justify-content:center;
-margin-top:35px;
+margin:15px auto;
 padding:16px 40px;
 border-radius:50px;
 background:#1DB954;
