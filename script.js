@@ -11,7 +11,7 @@ async function startRadio() {
         await radio.play();
         playBtn.innerHTML = "⏸ Pausar";
     } catch (err) {
-        console.log("Autoplay bloqueado ou stream indisponível.", err);
+        console.log("Autoplay bloqueado.", err);
     }
 }
 
@@ -46,8 +46,9 @@ radio.addEventListener("playing", () => {
 });
 
 radio.addEventListener("pause", () => {
-    if (!reconnecting)
+    if (!reconnecting) {
         playBtn.innerHTML = "▶ Ouvir Agora";
+    }
 });
 
 radio.addEventListener("error", reconnect);
@@ -67,9 +68,20 @@ function reconnect() {
         try {
 
             radio.pause();
+            radio.load();
+            await radio.play();
 
-radio.load();
-await radio.play();
+        } catch (e) {
+
+            console.log("Reconexão falhou.", e);
+
+        }
+
+        reconnecting = false;
+
+    }, 3000);
+
+}
 
 window.addEventListener("load", () => {
     setTimeout(startRadio, 500);
