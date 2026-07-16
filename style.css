@@ -645,3 +645,22 @@ transparent
 transform:rotate(-8deg);
 pointer-events:none;
 }
+
+@keyframes glowPulse{
+
+0%{
+transform:scale(.95);
+opacity:.45;
+}
+
+50%{
+transform:scale(1.08);
+opacity:1;
+}
+
+100%{
+transform:scale(.95);
+opacity:.45;
+}
+
+}
