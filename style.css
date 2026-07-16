@@ -193,12 +193,15 @@ z-index:-1;
 .vinyl::after{
 content:"";
 position:absolute;
-width:14px;
-height:14px;
-background:#111;
-border:3px solid #444;
+width:22px;
+height:22px;
+background:radial-gradient(circle,#777 0%,#444 35%,#1a1a1a 70%,#000 100%);
+border:2px solid #666;
 border-radius:50%;
-z-index:2;
+box-shadow:
+0 0 8px rgba(255,255,255,.25),
+inset 0 0 5px rgba(255,255,255,.2);
+z-index:4;
 }
   
 .vinyl img{
