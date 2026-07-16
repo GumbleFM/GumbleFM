@@ -213,6 +213,8 @@ z-index:4;
     left:10px;
     top:2px;
     z-index:1;
+    border-radius:50%;
+    box-shadow:0 0 0 5px #111;
 }
 
 .vinyl.spinning{
