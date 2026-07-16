@@ -130,15 +130,15 @@ margin:auto;
 }
 
 .player{
-position:relative;
-overflow:hidden;
-background:linear-gradient(145deg,#161616,#0d0d0d);
-border:1px solid rgba(255,255,255,.08);
-border-radius:35px;
-box-shadow:
-0 0 60px rgba(29,185,84,.12),
-0 25px 60px rgba(0,0,0,.6),
-inset 0 1px 0 rgba(255,255,255,.05);
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+max-width:1200px;
+margin:80px auto;
+padding:50px;
+background:#111;
+border-radius:30px;
 }
 
 .player:hover{
