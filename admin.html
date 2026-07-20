@@ -101,7 +101,13 @@ Logout
 
 alert("Script carregado");  
   
-const supabase = window.supabase.createClient(
+const { createClient } = supabase;
+
+const client = createClient(
+'https://ojoeyvevtphcswnmfoyq.supabase.co',
+'sb_publishable_0NKGnNx-l4L_DArnEy9QPQ_SRzZzd8B'
+);
+  
 'https://ojoeyvevtphcswnmfoyq.supabase.co',
 'sb_publishable_0NKGnNx-l4L_DArnEy9QPQ_SRzZzd8B'
 );
