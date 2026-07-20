@@ -93,3 +93,50 @@ const supabase = window.supabase.createClient(
 'sb_publishable_0NKGnNx-l4L_DArnEy9QPQ_SRzZzd8B'
 
 );
+
+const supabase = window.supabase.createClient(
+'https://ojoeyvevtphcswnmfoyq.supabase.co',
+'sb_publishable_0NKGnNx-l4L_DArnEy9QPQ_SRzZzd8B'
+);
+
+function openCommentForm(){
+document.getElementById("commentModal").style.display="flex";
+}
+
+function closeCommentForm(){
+document.getElementById("commentModal").style.display="none";
+}
+
+async function sendComment(){
+
+const name=document.getElementById("commentName").value.trim();
+const message=document.getElementById("commentMessage").value.trim();
+
+if(!name || !message){
+alert("Preenche o nome e o comentário.");
+return;
+}
+
+const {error}=await supabase
+.from("comments")
+.insert([{
+name:name,
+message:message
+}]);
+
+if(error){
+
+alert("Erro ao enviar o comentário.");
+console.error(error);
+return;
+
+}
+
+alert("Comentário enviado com sucesso! Será publicado após aprovação.");
+
+document.getElementById("commentName").value="";
+document.getElementById("commentMessage").value="";
+
+closeCommentForm();
+
+}
