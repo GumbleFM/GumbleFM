@@ -137,6 +137,6 @@ alert("Comentário enviado com sucesso! Será publicado após aprovação.");
 document.getElementById("commentName").value="";
 document.getElementById("commentMessage").value="";
 
-closeCommentForm();
+checkUser();
 
 }
