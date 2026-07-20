@@ -85,3 +85,11 @@ shareBtn.addEventListener("click", async () => {
     }
 
 });
+
+const supabase = window.supabase.createClient(
+
+'https://ojoeyvevtphcswnmfoyq.supabase.co',
+
+'sb_publishable_0NKGnNx-l4L_DArnEy9QPQ_SRzZzd8B'
+
+);
