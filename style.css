@@ -812,3 +812,55 @@ transform:translateY(-4px);
 background:#22d162;
 box-shadow:0 0 35px rgba(29,185,84,.45);
 }
+
+.sticky-wall{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin:45px 0;
+}
+
+.sticky{
+width:220px;
+min-height:180px;
+padding:20px;
+border-radius:8px;
+box-shadow:0 12px 30px rgba(0,0,0,.35);
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+transition:.3s;
+}
+
+.sticky:hover{
+transform:rotate(0deg) scale(1.06);
+}
+
+.sticky p{
+font-size:18px;
+font-weight:600;
+color:#222;
+line-height:1.6;
+}
+
+.sticky span{
+margin-top:20px;
+font-weight:bold;
+color:#333;
+}
+
+.yellow{
+background:#FFE97A;
+transform:rotate(-4deg);
+}
+
+.green{
+background:#B9F7A6;
+transform:rotate(3deg);
+}
+
+.pink{
+background:#FFC5E5;
+transform:rotate(-2deg);
+}
