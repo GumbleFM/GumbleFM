@@ -710,3 +710,39 @@ opacity:.45;
 }
 
 }
+
+.notice-bar{
+width:100%;
+background:#1DB954;
+overflow:hidden;
+padding:12px 0;
+box-shadow:0 5px 20px rgba(29,185,84,.25);
+border-top:1px solid rgba(255,255,255,.15);
+border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.notice-track{
+display:inline-block;
+white-space:nowrap;
+padding-left:100%;
+font-size:17px;
+font-weight:700;
+color:#fff;
+animation:noticeScroll 28s linear infinite;
+}
+
+.notice-track strong{
+color:#111;
+background:#fff;
+padding:3px 8px;
+border-radius:8px;
+}
+
+@keyframes noticeScroll{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(-100%);
+}
+}
