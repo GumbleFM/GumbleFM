@@ -64,15 +64,77 @@ color:white;
 <div id="comments"></div>
 
 <script>
-
 const supabase = window.supabase.createClient(
-
 'https://ojoeyvevtphcswnmfoyq.supabase.co',
-
-'COLOCA_AQUI_A_TUA_PUBLISHABLE_KEY'
-
+'sb_publishable_0NKGnNx-l4L_DArnEy9QPQ_SRzZzd8B'
 );
 
+async function loadComments(){
+
+const {data,error}=await supabase
+.from('comments')
+.select('*')
+.eq('approved',false)
+.order('created_at',{ascending:false});
+
+const container=document.getElementById('comments');
+
+container.innerHTML='';
+
+if(error){
+
+container.innerHTML='<p>Erro ao carregar comentários.</p>';
+return;
+
+}
+
+data.forEach(comment=>{
+
+container.innerHTML+=`
+<div class="comment">
+
+<h3>${comment.name}</h3>
+
+<p>${comment.message}</p>
+
+<button class="approve" onclick="approve(${comment.id})">
+Aprovar
+</button>
+
+<button class="delete" onclick="removeComment(${comment.id})">
+Eliminar
+</button>
+
+</div>
+`;
+
+});
+
+}
+
+async function approve(id){
+
+await supabase
+.from('comments')
+.update({approved:true})
+.eq('id',id);
+
+loadComments();
+
+}
+
+async function removeComment(id){
+
+await supabase
+.from('comments')
+.delete()
+.eq('id',id);
+
+loadComments();
+
+}
+
+loadComments();
 </script>
 
 </body>
