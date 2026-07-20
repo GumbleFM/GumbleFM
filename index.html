@@ -195,16 +195,38 @@ Todos os comentários são verificados antes de serem publicados.
     
 <div class="community-action">
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSfZhOjSMM8ya06TBBeg5f6691cwcHS0jfIvTXJ5xMLxYZx1SQ/viewform"
-target="_blank"
-class="comment-btn">
-
+<button class="comment-btn" onclick="openCommentForm()">
 ✍️ Deixar um comentário
-
-</a>
+</button>
 
 </div>
 
+<div id="commentModal" class="comment-modal">
+
+<div class="comment-box">
+
+<h3>Deixa o teu comentário</h3>
+
+<input
+type="text"
+id="commentName"
+placeholder="O teu nome">
+
+<textarea
+id="commentMessage"
+placeholder="Escreve o teu comentário..."></textarea>
+
+<button onclick="sendComment()">
+Enviar
+</button>
+
+<button onclick="closeCommentForm()">
+Cancelar
+</button>
+
+</div>
+
+</div>
 </section>
 
 </main>
