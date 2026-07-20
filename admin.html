@@ -59,9 +59,43 @@ color:white;
 
 <body>
 
+<div id="login">
+
+<h1>Painel GumbleFM</h1>
+
+<input
+id="email"
+type="email"
+placeholder="Email">
+
+<br><br>
+
+<input
+id="password"
+type="password"
+placeholder="Password">
+
+<br><br>
+
+<button onclick="login()">
+Entrar
+</button>
+
+</div>
+
+<div id="panel" style="display:none;">
+
 <h1>Comentários Pendentes</h1>
 
+<button onclick="logout()">
+Logout
+</button>
+
+<br><br>
+
 <div id="comments"></div>
+
+</div>
 
 <script>
 const supabase = window.supabase.createClient(
