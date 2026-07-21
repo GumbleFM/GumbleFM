@@ -87,14 +87,6 @@ shareBtn.addEventListener("click", async () => {
 });
 
 const supabase = window.supabase.createClient(
-
-'https://ojoeyvevtphcswnmfoyq.supabase.co',
-
-'sb_publishable_0NKGnNx-l4L_DArnEy9QPQ_SRzZzd8B'
-
-);
-
-const supabase = window.supabase.createClient(
 'https://ojoeyvevtphcswnmfoyq.supabase.co',
 'sb_publishable_0NKGnNx-l4L_DArnEy9QPQ_SRzZzd8B'
 );
@@ -137,6 +129,11 @@ alert("Comentário enviado com sucesso! Será publicado após aprovação.");
 document.getElementById("commentName").value="";
 document.getElementById("commentMessage").value="";
 
-checkUser();
+alert("Comentário enviado com sucesso! Será publicado após aprovação.");
+
+document.getElementById("commentName").value="";
+document.getElementById("commentMessage").value="";
+
+closeCommentForm();
 
 }
