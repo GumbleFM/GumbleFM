@@ -180,16 +180,21 @@ async function login(){
 const email=document.getElementById("email").value.trim();
 const password=document.getElementById("password").value;
 
-const {data,error}=await client.auth.signInWithPassword({
-email,
-password
+const { data, error } = await client.auth.signInWithPassword({
+  email,
+  password
 });
 
-alert(JSON.stringify(error));
-alert(JSON.stringify(data));
-
 if(error){
-return;
+  alert(error.message);
+  return;
+}
+
+document.getElementById("login").style.display="none";
+document.getElementById("panel").style.display="block";
+
+loadComments();
+
 }
 
 checkUser();
