@@ -146,4 +146,6 @@ window.openCommentForm = openCommentForm;
 window.closeCommentForm = closeCommentForm;
 window.sendComment = sendComment;
 
+alert("SCRIPT CARREGADO");
+
 
