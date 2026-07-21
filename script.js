@@ -140,10 +140,10 @@ document.getElementById("commentMessage").value="";
 
 closeCommentForm();
 
+}
+
 window.openCommentForm = openCommentForm;
 window.closeCommentForm = closeCommentForm;
 window.sendComment = sendComment;
-
-}
 
 
