@@ -92,7 +92,11 @@ const supabase = window.supabase.createClient(
 );
 
 function openCommentForm(){
+
+alert("A função abriu!");
+
 document.getElementById("commentModal").style.display="flex";
+
 }
 
 function closeCommentForm(){
