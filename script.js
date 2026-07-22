@@ -1,3 +1,5 @@
+alert("SCRIPT NOVO");
+
 const radio = document.getElementById("radio");
 const playBtn = document.getElementById("playBtn");
 
