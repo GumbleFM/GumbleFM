@@ -92,10 +92,14 @@ alert("✅ Link copiado!");
 
 });
 
-const supabase = window.supabase.createClient(
-'https://ojoeyvevtphcswnmfoyq.supabase.co',
-'sb_publishable_0NKGnNx-l4L_DArnEy9QPQ_SRzZzd8B'
-);
+let supabase = null;
+
+if (window.supabase) {
+    supabase = window.supabase.createClient(
+        'https://ojoeyvevtphcswnmfoyq.supabase.co',
+        'sb_publishable_0NKGnNx-l4L_DArnEy9QPQ_SRzZzd8B'
+    );
+}
 
 function openCommentForm(){
 
