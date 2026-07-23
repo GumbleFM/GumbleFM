@@ -1,3 +1,7 @@
+window.onerror = function(msg, url, line) {
+    alert(msg + " | linha: " + line);
+};
+
 alert("SCRIPT NOVO");
 
 const radio = document.getElementById("radio");
