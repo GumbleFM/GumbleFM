@@ -1,9 +1,3 @@
-window.onerror = function(msg, url, line) {
-    alert(msg + " | linha: " + line);
-};
-
-alert("SCRIPT NOVO");
-
 const radio = document.getElementById("radio");
 const playBtn = document.getElementById("playBtn");
 
@@ -159,7 +153,3 @@ closeCommentForm();
 window.openCommentForm = openCommentForm;
 window.closeCommentForm = closeCommentForm;
 window.sendComment = sendComment;
-
-alert("SCRIPT CARREGADO");
-
-~
