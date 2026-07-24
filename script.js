@@ -1,4 +1,8 @@
 const radio = document.getElementById("radio");
+
+radio.load();
+
+console.log("readyState:", radio.readyState, "networkState:", radio.networkState);
 const playBtn = document.getElementById("playBtn");
 
 console.log(playBtn);
