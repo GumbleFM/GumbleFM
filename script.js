@@ -17,8 +17,16 @@ playBtn.addEventListener("click", async () => {
 if (radio.paused) {
 
 try {
-await radio.play();
-playBtn.textContent = "⏸ Pausar";
+console.log("Clique!");
+
+radio.play()
+.then(() => {
+    console.log("TOCOU");
+    playBtn.textContent = "⏸ Pausar";
+})
+.catch(err => {
+    console.error("ERRO PLAY:", err);
+});
 } catch (e) {
 alert("Não foi possível iniciar a rádio.");
 }
