@@ -1,3 +1,4 @@
+alert("SCRIPT COMEÇOU");
 const radio = document.getElementById("radio");
 
 radio.load();
@@ -11,6 +12,8 @@ console.log(radio);
 const volume = document.getElementById("volume");
 
 radio.volume = 1;
+
+alert("CHEGUEI AO PLAYER");
 
 playBtn.addEventListener("click", async () => {
 
